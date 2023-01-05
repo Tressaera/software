@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  border: none;
+  font-family: "Mulish", sans-serif;
+  -webkit-overflow-scrolling: touch;
+}
+*:focus {
+  outline: none;
+}
+
+body {
+  background: #f1f6ff;
+  padding: 50px;
+}
+
+.divider {
+  height: 100px;
+}
+
+.component--cdn-list {
+  width: 668px;
+  margin-bottom: 60px;
+}
+.component--cdn-list ul li {
+  margin-bottom: 25px;
+}
+.component--cdn-list ul li:last-child {
+  margin-bottom: 0;
+}
+.component--cdn-list ul li a {
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 50px 34px;
+  background: rgb(196, 194, 194);
+  color: #181d39;
+  box-shadow: 0 30px 75px -35px rgba(35, 68, 126, 0.39);
+  transition: 300ms background-color, 300ms color;
+}
+.component--cdn-list ul li a .title-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.component--cdn-list ul li a .title-wrapper .star {
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
+}
+.component--cdn-list ul li a .title-wrapper .star i {
+  margin-right: 10px;
+}
+.component--cdn-list ul li a .title-wrapper .star .icon-star {
+  fill: #181d39;
+  transition: 300ms color;
+}
+.component--cdn-list ul li a .title {
+  font-size: 22px;
+  font-weight: bold;
+  color: #181d39;
+}
+.component--cdn-list ul li a .title span {
+  font-size: 16px;
+  opacity: 0.5;
+}
+.component--cdn-list ul li a .description {
+  max-width: 380px;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 20px;
+}
+.component--cdn-list ul li a .tags {
+  display: flex;
+  align-items: center;
+  margin: 0 -5px;
+}
+.component--cdn-list ul li a .tags span {
+  padding: 0 10px;
+  height: 30px;
+  border-radius: 30px;
+  background: #f1f6ff;
+  display: flex;
+  line-height: 1;
+  align-items: center;
+  font-size: 14px;
+  margin: 0 5px;
+  transition: 300ms background-color;
+}
+.component--cdn-list ul li a:hover {
+  background: #272e69;
+  color: #fff;
+}
+.component--cdn-list ul li a:hover .tags span {
+  background: #1a2261;
+}
+.component--cdn-list ul li a:hover .star .icon-star {
+  fill: #fff;
+}
+.component--cdn-list ul li.active a {
+  background: #272e69;
+  color: #fff;
+}
+.component--cdn-list ul li.active a .tags span {
+  background: #1a2261;
+}
+.component--cdn-list ul li.active a .star .icon-star {
+  fill: #fff;
+}
+.component--cdn-detail {
+  background: rgb(196, 194, 194);
+  width: 668px;
+  border-radius: 15px;
+  box-shadow: 0 30px 75px -35px rgba(35, 68, 126, 0.39);
+  padding: 50px;
+}
+.component--cdn-detail h3 {
+  font-size: 26px;
+  font-weight: bold;
+  color: #181d39;
+  margin-bottom: 20px;
+}
+.component--cdn-detail .form {
+  display: flex;
+}
+.component--cdn-detail .form li {
+  margin-right: 20px;
+}
+.component--cdn-detail .form li:last-child {
+  margin-right: 0;
+}
+.component--cdn-detail .form li label {
+  display: block;
+  font-size: 16px;
+  color: #181d39;
+  margin-bottom: 10px;
+}
+.component--cdn-detail .form li select {
+  min-width: 154px;
+  border: 2px solid #909295;
+  height: 50px;
+  padding: 0 15px;
+  border-radius: 5px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: url(../img/expand-more.svg) no-repeat right;
+  cursor: pointer;
+  background-size: 20px;
+}
+.component--cdn-detail .items li {
+  margin-bottom: 5px;
+  height: 75px;
+  border-radius: 5px;
+  border: 2px solid #1a2261;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px 0 25px;
+}
+.component--cdn-detail .items li:last-child {
+  margin-bottom: 0px;
+}
+.component--cdn-detail .items li .text {
+  font-size: 16px;
+  color: #181d39;
+}
+.component--cdn-detail .items li button {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 0 40px;
+  background-color: rgb(196, 194, 194);
+  background: url(../img/icon-copy.svg) no-repeat right;
+  position: relative;
+}
+.component--cdn-detail .items li button:after {
+  content: "";
+  border: 4px solid transparent;
+  border-top-color: red;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-32%, -60%);
+}
+.component--cdn-detail .items li button::before {
+  content: attr(data-copy);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-15%, -180%);
+  background: #181d39;
+  color: #fff;
+  font-size: 14px;
+  padding: 0 15px;
+  white-space: nowrap;
+  border-radius: 5px;
+  display: none;
+}
+.component--cdn-detail .items li button.copied::before {
+  transition: 2s content;
+  content: attr(data-copied);
+}
+.component--cdn-detail .items li button:hover::before {
+  display: block;
+}
+.component--cdn-detail .more-btn {
+  margin-top: 30px;
+}
+.component--cdn-detail .more-btn a {
+  display: inline-flex;
+  height: 70px;
+  padding: 0 35px;
+  align-items: center;
+  color: #fff;
+  background-color: #272e69;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 0 15px 35px -5px rgba(35, 68, 126, 0.39);
+  transition: 500ms opacity;
+}
+.component--cdn-detail .more-btn a:hover {
+  opacity: 0.9;
+}/*# sourceMappingURL=style.css.map */
