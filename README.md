@@ -1,1 +1,2 @@
-Sass-css-js ile yapılmış ufak bir sitedir.
+Uygulamayı görmek için:
+https://software-coral.vercel.app/
